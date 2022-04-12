@@ -8,6 +8,7 @@ var box1, pig1;
 var backgroundImage;
 var plataform;
 var constrainedLog;
+var cuadrado;
 
 function preload(){
     backgroundImage = loadImage("sprites/bg.png")
@@ -21,6 +22,7 @@ function setup(){
     constrainedLog = new Log(230,180,80,PI/2);
     ground = new Ground(600,height,1200,20);
     plataform = new Ground(150,305,300,170);
+cuadrado = new Ground(600,200,50,50);
 
     box1 = new Box(700,320,70,70);
     box2 = new Box(920,320,70,70);
@@ -74,6 +76,7 @@ function draw(){
     bird.display();
     plataform.display();
     constrainedLog.display();
+cuadrado.display();
 
     strokeWeight(3);
     line(bird.body.position.x, bird.body.position.y, 
